@@ -5,11 +5,13 @@ sequenceDiagram
     
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
+
+    Note left of server: The server retrieves input form data, creates new note object and adds it to the notes array
+    
     server-->>browser: URL redirect
     deactivate server
     
-    Note left of server: The server retrieves input form data, creates new note object and adds it to array notes
-    
+
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: HTML document
