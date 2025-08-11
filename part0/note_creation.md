@@ -8,9 +8,8 @@ sequenceDiagram
 
     Note left of server: The server retrieves input form data, creates new note object and adds it to the notes array
     
-    server-->>browser: URL redirect
+    server-->>browser: Header "location" indicates the URL to GET
     deactivate server
-    
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
